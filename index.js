@@ -12,10 +12,7 @@ connect.then((db) => {
     var newDish = Dishes({
         name: 'Uthappizza',
         description: 'test'
-    });
-
-    newDish.save()
-        .then((dish) => {
+    }).then((dish) => {
             console.log(dish);
 
             return Dishes.find({});
@@ -31,5 +28,4 @@ connect.then((db) => {
         .catch((err) => {
             console.log(err);
         });
-
 });
